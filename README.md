@@ -1,4 +1,4 @@
-# 🎧 Crate Digger
+# 🎧 Next Track Finder
 
 Point it at a track you love; it returns **new tracks that mix well with it** — ranked by
 harmonic (musical-key) compatibility and tempo. Built for DJs who want to answer *"what do
