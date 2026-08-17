@@ -1,0 +1,7 @@
+{
+  "name": "crate-digger-webapp",
+  "version": "0.1.0",
+  "type": "commonjs",
+  "main": "src/server.cjs",
+  "scripts": { "start": "node src/server.cjs" }
+}

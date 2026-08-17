@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Crate Digger — Live</title>
+<link rel="stylesheet" href="/style.css" />
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
+</head>
+<body>
+
+<header class="top">
+  <div class="brand">
+    <i data-lucide="disc-3" class="brand-icon"></i>
+    <div class="brand-text">
+      <div class="brand-name">Crate Digger</div>
+      <div class="brand-sub">LIVE HARMONIC MIXING</div>
+    </div>
+  </div>
+  <div class="conn" id="conn">
+    <i data-lucide="loader-2" class="spin"></i>
+    <span id="conn-text">connecting…</span>
+  </div>
+</header>
+
+<main class="decks">
+
+  <!-- ===== DECK A · AUTO ===== -->
+  <section class="deck deck-auto" id="deck-A">
+    <div class="deck-header">
+      <div class="deck-title">
+        <i data-lucide="radio-tower"></i>
+        <span class="deck-label">DECK A</span>
+        <span class="deck-mode">AUTO</span>
+      </div>
+      <div class="deck-source" id="src-A">
+        <i data-lucide="wifi-off"></i>
+        <span>waiting for djay</span>
+      </div>
+    </div>
+
+    <div class="seed-card" id="seed-A">
+      <div class="seed-empty">
+        <i data-lucide="headphones" class="empty-icon"></i>
+        <p class="empty-title">No track detected</p>
+        <p class="empty-hint">Load a track in djay Pro. This deck auto-updates.</p>
+      </div>
+    </div>
+
+    <h2 class="recs-title">
+      <i data-lucide="arrow-down-narrow-wide"></i>
+      Mix into these next
+      <span class="click-hint"><i data-lucide="copy"></i> click to copy</span>
+    </h2>
+    <ul class="recs" id="recs-A"><li class="rec-empty">—</li></ul>
+  </section>
+
+  <!-- ===== DECK B · MANUAL ===== -->
+  <section class="deck deck-manual" id="deck-B">
+    <div class="deck-header">
+      <div class="deck-title">
+        <i data-lucide="pencil-line"></i>
+        <span class="deck-label">DECK B</span>
+        <span class="deck-mode">PREP</span>
+      </div>
+      <div class="deck-source" id="src-B">
+        <i data-lucide="hand"></i>
+        <span>manual</span>
+      </div>
+    </div>
+
+    <div class="seed-card" id="seed-B">
+      <div class="seed-empty">
+        <i data-lucide="music-2" class="empty-icon"></i>
+        <p class="empty-title">Prep the next track</p>
+        <p class="empty-hint">Type a track below to preview mixes for it.</p>
+      </div>
+    </div>
+
+    <form class="manual" onsubmit="submitSeed('B', event)">
+      <div class="input-wrap">
+        <i data-lucide="search"></i>
+        <input type="text" id="input-B" placeholder='artist – title  (e.g. "Bicep - Glue")' autocomplete="off" />
+      </div>
+      <button type="submit"><i data-lucide="plus"></i> Load</button>
+    </form>
+
+    <h2 class="recs-title">
+      <i data-lucide="arrow-down-narrow-wide"></i>
+      Mix into these next
+      <span class="click-hint"><i data-lucide="copy"></i> click to copy</span>
+    </h2>
+    <ul class="recs" id="recs-B"><li class="rec-empty">—</li></ul>
+  </section>
+
+</main>
+
+<div id="toast" class="toast hidden">
+  <i data-lucide="check-circle-2"></i>
+  <span id="toast-text">Copied</span>
+</div>
+
+<footer>
+  <span>Camelot wheel · harmonic + BPM scoring · data via Beatport</span>
+</footer>
+
+<script src="/app.js" defer></script>
+</body>
+</html>
