@@ -37,9 +37,9 @@ function circDist(a, b) { const d = Math.abs(a - b) % 12; return Math.min(d, 12 
 function harmonicScore(a, b) {
   if (!a || !b) return { score: 0, rel: "unknown" };
   if (a.num === b.num && a.letter === b.letter) return { score: 1.0, rel: "same key" };
-  if (a.num === b.num) return { score: 0.9, rel: "relative maj/min" };
   const d = circDist(a.num, b.num);
   if (a.letter === b.letter && d === 1) return { score: 0.85, rel: "±1 (perfect 5th)" };
+  if (a.num === b.num) return { score: 0.9, rel: "relative maj/min" };
   if (a.letter === b.letter && d === 2) return { score: 0.6, rel: "+2 energy boost" };
   if (a.letter !== b.letter && d === 1) return { score: 0.5, rel: "diagonal" };
   return { score: 0.0, rel: "clash" };

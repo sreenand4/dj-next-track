@@ -25,8 +25,8 @@ Scoring lives in [`camelot.cjs`](camelot.cjs) — pure, dependency-free function
 | Harmonic relationship        | Score | Meaning                                        |
 |------------------------------|-------|------------------------------------------------|
 | Same key (e.g. `8A` → `8A`)  | 1.00  | Perfect blend                                  |
-| Relative major/minor         | 0.90  | Same number, swap A↔B                          |
 | ±1 on the wheel (perfect 5th)| 0.85  | The classic "energy stays" mix                 |
+| Relative major/minor         | 0.90  | Same number, swap A↔B                          |
 | +2 (energy boost)            | 0.60  | Lifts the room                                 |
 | Diagonal                     | 0.50  | Usable                                         |
 | Anything else                | 0.00  | Clash                                          |
